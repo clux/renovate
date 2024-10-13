@@ -5,7 +5,7 @@ ARG YQ_VERSION=0.10.2
 # renovate: datasource=github-releases depName=casey/just
 ARG JUST_VERSION=1.28.0
 # renovate: datasource=github-releases depName=BurntSushi/ripgrep
-ARG RG_VERSION=14.1.0
+ARG RG_VERSION=14.1.1
 # renovate: datasource=github-releases depName=sharkdp/fd
 ARG FD_VERSION=10.2.0
 # renovate: datasource=github-releases depName=chmln/sd
