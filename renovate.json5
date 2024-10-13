@@ -11,7 +11,7 @@
     {
       "matchDatasources": ["docker"],
       "matchPackageNames": ["ghcr.io/renovatebot/renovate"],
-      "versioning": "regex:^(?<compatibility>.*)-(?<minor>\\d+)-slim$"
+      "versioning": "^(?<major>\\d+)(\\.(?<minor>\\d+)\\.(?<patch>\\d+))-slim$",
     },
   ],
 }
