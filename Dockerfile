@@ -14,7 +14,7 @@ ARG SD_VERSION=1.0.0
 ARG PB_VERSION=28.2
 
 USER root
-RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --profile minimal -y && rustup component add rustfmt && rustup default stable
+
 RUN curl -sSL https://github.com/protocolbuffers/protobuf/releases/download/v${PB_VERSION}/protoc-${PB_VERSION}-linux-x86_64.zip -o /tmp/protoc.zip && \
       unzip /tmp/protoc.zip 'bin/*' -d /usr/local/
 RUN curl -sSL https://github.com/clux/whyq/releases/download/${YQ_VERSION}/yq-x86_64-unknown-linux-musl.tar.xz | tar xJ --strip-components=1 -C /usr/local/bin && \
@@ -28,9 +28,12 @@ RUN rg --version && which rg && \
     just --version && which just && \
     sd --version && which sd && \
     yq --version && which yq && \
-    protoc --version && which protoc && \
-    cargo --version && which cargo && \
-    rustc --version && which rustc && \
-    cargo fmt --version && which rustfmt
+    protoc --version && which protoc
 
 USER ubuntu
+
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --profile minimal -y --no-modify-path --default-toolchain stable && rustup component add rustfmt
+
+RUN cargo --version && which cargo && \
+    rustc --version && which rustc && \
+    cargo fmt --version && which rustfmt
