@@ -3,8 +3,8 @@
   extends: [
     "config:base",
     ":gitSignOff",
-    ":disableDependencyDashboard"
-    "customManagers:dockerfileVersions" // _VERSION vars in Dockerfiles
+    ":disableDependencyDashboard",
+    "customManagers:dockerfileVersions", // _VERSION vars in Dockerfiles
   ],
   packageRules: [
     // Maintain -slim flavor
