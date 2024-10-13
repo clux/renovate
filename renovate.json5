@@ -10,7 +10,7 @@
     // Maintain -slim flavor
     {
       "matchDatasources": ["docker"],
-      "matchPackageNames": ["renovatebot/renovate"],
+      "matchPackageNames": ["**renovate"],
       "versioning": "regex:^(?<compatibility>.*)-(?<minor>\\d+)-slim$"
     },
   ],
