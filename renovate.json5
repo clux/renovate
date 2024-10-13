@@ -4,6 +4,7 @@
     "config:base",
     ":gitSignOff",
     ":disableDependencyDashboard"
+    "customManagers:dockerfileVersions" // _VERSION vars in Dockerfiles
   ],
   packageRules: [
     // Maintain -slim flavor
@@ -12,16 +13,5 @@
       "matchPackageNames": ["renovatebot/renovate"],
       "versioning": "regex:^(?<compatibility>.*)-(?<minor>\\d+)-slim$"
     },
-  ],
-  customManagers: [
-    {
-      "customType": "regex",
-      "fileMatch": ["(^|/)Dockerfile$", "(^|/)Dockerfile\\.[^/]*$"],
-      "matchStrings": [
-        "renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\sARG .*?_VER=(?<currentValue>.*)\\s"
-      ],
-      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}",
-      "extractVersionTemplate": "^v?(?<version>\\d+\\.\\d+\\.\\d+)"
-    }
   ],
 }
