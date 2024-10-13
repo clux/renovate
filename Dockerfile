@@ -1,4 +1,4 @@
-FROM ghcr.io/renovatebot/renovate:37-slim
+FROM ghcr.io/renovatebot/renovate:37.440.7-slim
 
 # renovate: datasource=github-releases depName=clux/whyq
 ARG YQ_VER=0.10.2
