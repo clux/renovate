@@ -6,6 +6,7 @@ A renovate image with the following dependencies installed:
 - [jq](https://stedolan.github.io/jq/)
 - [just](https://github.com/casey/just)
 - [sd](https://github.com/chmln/sd)
+- [lq](https://github.com/clux/lq)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 - [protoc](https://github.com/protocolbuffers/protobuf)
 - [rustmft](https://github.com/rust-lang/rustfmt)
