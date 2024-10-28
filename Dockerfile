@@ -1,7 +1,7 @@
 FROM ghcr.io/renovatebot/renovate:37.440.7-slim
 
-# renovate: datasource=github-releases depName=clux/whyq
-ARG YQ_VERSION=0.10.2
+# renovate: datasource=github-releases depName=clux/lq
+ARG LQ_VERSION=0.12.1
 # renovate: datasource=github-releases depName=casey/just
 ARG JUST_VERSION=1.36.0
 # renovate: datasource=github-releases depName=BurntSushi/ripgrep
@@ -17,7 +17,7 @@ USER root
 
 RUN curl -sSL https://github.com/protocolbuffers/protobuf/releases/download/v${PB_VERSION}/protoc-${PB_VERSION}-linux-x86_64.zip -o /tmp/protoc.zip && \
       unzip /tmp/protoc.zip 'bin/*' -d /usr/local/
-RUN curl -sSL https://github.com/clux/whyq/releases/download/${YQ_VERSION}/yq-x86_64-unknown-linux-musl.tar.xz | tar xJ --strip-components=1 -C /usr/local/bin && \
+RUN curl -sSL https://github.com/clux/lq/releases/download/${LQ_VERSION}/lq-x86_64-unknown-linux-musl.tar.xz | tar xJ --strip-components=1 -C /usr/local/bin && \
     curl -sSL https://github.com/casey/just/releases/download/${JUST_VERSION}/just-${JUST_VERSION}-x86_64-unknown-linux-musl.tar.gz | tar xz -C /usr/local/bin && \
     curl -sSL https://github.com/BurntSushi/ripgrep/releases/download/${RG_VERSION}/ripgrep-${RG_VERSION}-x86_64-unknown-linux-musl.tar.gz | tar xz --strip-components=1 -C /usr/local/bin && \
     curl -sSL https://github.com/sharkdp/fd/releases/download/v${FD_VERSION}/fd-v${FD_VERSION}-x86_64-unknown-linux-musl.tar.gz | tar xz --strip-components=1 -C /usr/local/bin/ --wildcards '*fd' && \
@@ -27,7 +27,7 @@ RUN rg --version && which rg && \
     sd --version && which fd && \
     just --version && which just && \
     sd --version && which sd && \
-    yq --version && which yq && \
+    lq --version && which lq && \
     protoc --version && which protoc
 
 USER ubuntu
