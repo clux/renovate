@@ -3,7 +3,7 @@ FROM ghcr.io/renovatebot/renovate:37.440.7-slim
 # renovate: datasource=github-releases depName=clux/lq
 ARG LQ_VERSION=0.12.2
 # renovate: datasource=github-releases depName=casey/just
-ARG JUST_VERSION=1.36.0
+ARG JUST_VERSION=1.37.0
 # renovate: datasource=github-releases depName=BurntSushi/ripgrep
 ARG RG_VERSION=14.1.1
 # renovate: datasource=github-releases depName=sharkdp/fd
