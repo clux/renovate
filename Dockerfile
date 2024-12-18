@@ -11,7 +11,7 @@ ARG FD_VERSION=10.2.0
 # renovate: datasource=github-releases depName=chmln/sd
 ARG SD_VERSION=1.0.0
 # renovate: datasource=github-releases depName=protocolbuffers/protobuf
-ARG PB_VERSION=29.1
+ARG PB_VERSION=29.2
 
 USER root
 
