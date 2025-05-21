@@ -15,7 +15,7 @@ ARG PB_VERSION=30.0
 
 USER root
 
-RUN curl -sSL https://github.com/protocolbuffers/protobuf/releases/download/v${PB_VERSION}/protoc-${PB_VERSION}-linux-x86_64.zip -o /tmp/protoc.zip && \
+RUN curl -sSL https://github.com/protocolbuffers/protobuf/releases/download/v${PB_VERSION#v}/protoc-${PB_VERSION#v}-linux-x86_64.zip -o /tmp/protoc.zip && \
       unzip /tmp/protoc.zip 'bin/*' -d /usr/local/
 RUN curl -sSL https://github.com/clux/lq/releases/download/${LQ_VERSION}/lq-x86_64-unknown-linux-musl.tar.xz | tar xJ --strip-components=1 -C /usr/local/bin && \
     curl -sSL https://github.com/casey/just/releases/download/${JUST_VERSION}/just-${JUST_VERSION}-x86_64-unknown-linux-musl.tar.gz | tar xz -C /usr/local/bin && \
