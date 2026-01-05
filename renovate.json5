@@ -10,7 +10,7 @@
     // Maintain INT (non-full) flavor
     {
       "matchDatasources": ["docker"],
-      "matchPackageNames": ["ghcr.io/renovatebot/renovate"],
+      "matchPackageNames": ["renovatebot/renovate"],
       "versioning": "^(?<major>\\d+)$",
     },
   ],
