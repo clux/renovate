@@ -32,7 +32,9 @@ RUN rg --version && which rg && \
 
 USER ubuntu
 
-RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --profile minimal -y --no-modify-path --default-toolchain stable && rustup component add rustfmt
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --profile minimal -y --no-modify-path --default-toolchain stable && $HOME/.cargo/bin/rustup component add rustfmt
+
+ENV PATH="/home/ubuntu/.cargo/bin:${PATH}"
 
 RUN cargo --version && which cargo && \
     rustc --version && which rustc && \
