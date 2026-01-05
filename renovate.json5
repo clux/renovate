@@ -10,8 +10,8 @@
     // Maintain INT (non-full) flavor
     {
       "matchDatasources": ["docker"],
-      "matchPackageNames": ["renovatebot/renovate"],
-      "versioning": "^(?<major>\\d+)$",
+      "matchPackageNames": ["renovate/renovate"],
+      "versioning": "^(?<major>\\d+)(\\.(?<minor>\\d+)\\.(?<patch>\\d+))$",
     },
   ],
 }
