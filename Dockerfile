@@ -1,4 +1,4 @@
-FROM ghcr.io/renovatebot/renovate:37.440.7-slim
+FROM renovatebot/renovate:37.440.7
 
 # renovate: datasource=github-releases depName=clux/lq
 ARG LQ_VERSION=0.15.0
