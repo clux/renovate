@@ -15,4 +15,4 @@ for [homelab](https://github.com/clux/homelab) use.
 
 ## Releases
 
-Re-tags with matching versions from available [slim images](https://hub.docker.com/r/renovate/renovate/tags?name=slim).
+Re-tags with matching versions from available non-full [images](https://hub.docker.com/r/renovate/renovate/tags).
