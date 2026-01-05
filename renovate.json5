@@ -7,11 +7,11 @@
     "customManagers:dockerfileVersions", // _VERSION vars in Dockerfiles
   ],
   packageRules: [
-    // Maintain -slim flavor
+    // Maintain INT (non-full) flavor
     {
       "matchDatasources": ["docker"],
       "matchPackageNames": ["ghcr.io/renovatebot/renovate"],
-      "versioning": "^(?<major>\\d+)(\\.(?<minor>\\d+)\\.(?<patch>\\d+))-slim$",
+      "versioning": "^(?<major>\\d+)$",
     },
   ],
 }
