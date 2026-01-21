@@ -1,4 +1,4 @@
-FROM renovate/renovate:42.86
+FROM renovate/renovate:42.88.2
 
 # renovate: datasource=github-releases depName=clux/lq
 ARG LQ_VERSION=0.15.0
