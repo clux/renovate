@@ -11,7 +11,7 @@
     {
       "matchDatasources": ["docker"],
       "matchPackageNames": ["renovate/renovate"],
-      "versioning": "^(?<major>\\d+)(\\.(?<minor>\\d+)\\.(?<patch>\\d+))$",
+      "matchUpdateTypes": ["major"],
     },
   ],
 }
