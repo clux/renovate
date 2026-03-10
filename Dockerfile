@@ -7,7 +7,7 @@ ARG JUST_VERSION=1.46.0
 # renovate: datasource=github-releases depName=BurntSushi/ripgrep
 ARG RG_VERSION=15.1.0
 # renovate: datasource=github-releases depName=sharkdp/fd
-ARG FD_VERSION=10.4.1
+ARG FD_VERSION=10.4.2
 # renovate: datasource=github-releases depName=chmln/sd
 ARG SD_VERSION=1.1.0
 # renovate: datasource=github-releases depName=protocolbuffers/protobuf versioning=semver-coerced
