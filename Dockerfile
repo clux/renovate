@@ -3,7 +3,7 @@ FROM renovate/renovate:43
 # renovate: datasource=github-releases depName=clux/lq
 ARG LQ_VERSION=0.16.0
 # renovate: datasource=github-releases depName=casey/just
-ARG JUST_VERSION=1.50.0
+ARG JUST_VERSION=1.51.0
 # renovate: datasource=github-releases depName=BurntSushi/ripgrep
 ARG RG_VERSION=15.1.0
 # renovate: datasource=github-releases depName=sharkdp/fd
