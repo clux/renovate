@@ -11,7 +11,7 @@ ARG FD_VERSION=10.4.2
 # renovate: datasource=github-releases depName=chmln/sd
 ARG SD_VERSION=1.1.0
 # renovate: datasource=github-releases depName=protocolbuffers/protobuf versioning=semver-coerced
-ARG PB_VERSION=v34.2
+ARG PB_VERSION=v35.0
 
 USER root
 
