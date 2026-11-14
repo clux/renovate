@@ -5,7 +5,7 @@ ARG LQ_VERSION=0.16.0
 # renovate: datasource=github-releases depName=casey/just
 ARG JUST_VERSION=1.51.0
 # renovate: datasource=github-releases depName=BurntSushi/ripgrep
-ARG RG_VERSION=15.1.0
+ARG RG_VERSION=15.2.0
 # renovate: datasource=github-releases depName=sharkdp/fd
 ARG FD_VERSION=10.4.2
 # renovate: datasource=github-releases depName=chmln/sd
